@@ -1,0 +1,38 @@
+<%- include('../partials/head', { title: 'Editar producto' }) %>
+<%- include('../partials/header') %>
+
+<main class="container">
+    <h2>Editar producto</h2>
+    <form action="/products/edit/<%= product.id %>" method="POST">
+  <input type="text" name="name" value="<%= product.name %>">
+
+  <input type="number" name="price" value="<%= product.price %>">
+
+  <select name="category_id">
+    <% categories.forEach(c => { %>
+      <option value="<%= c.id %>" <%= c.id === product.category_id ? 'selected' : '' %>>
+        <%= c.name %>
+      </option>
+    <% }) %>
+  </select>
+
+  <select name="brand_id">
+    <% brands.forEach(b => { %>
+      <option value="<%= b.id %>" <%= b.id === product.brand_id ? 'selected' : '' %>>
+        <%= b.name %>
+      </option>
+    <% }) %>
+  </select>
+
+  <button type="submit">Guardar</button>
+</form>
+
+
+
+    
+
+
+
+</main>
+
+<%- include('../partials/footer') %>

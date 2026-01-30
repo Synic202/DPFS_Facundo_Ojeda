@@ -1,0 +1,11 @@
+<header>
+  <% if (user) { %>
+    <span>Hola, <%= user.firstName %></span>
+    <form action="/users/logout" method="POST" style="display:inline">
+      <button type="submit">Logout</button>
+    </form>
+  <% } else { %>
+    <a href="/users/login">Login</a>
+    <a href="/users/register">Register</a>
+  <% } %>
+</header>

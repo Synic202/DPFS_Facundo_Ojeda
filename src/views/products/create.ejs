@@ -1,0 +1,31 @@
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+
+    <section class="form-container">
+        <h2 class="form-title">Cargar nuevo producto</h2>
+        
+        <form action="/products/create" method="POST">
+  <input type="text" name="name" placeholder="Nombre" required>
+
+  <input type="number" name="price" placeholder="Precio" required>
+
+  <select name="category_id">
+    <% categories.forEach(c => { %>
+      <option value="<%= c.id %>"><%= c.name %></option>
+    <% }) %>
+  </select>
+
+  <select name="brand_id">
+    <% brands.forEach(b => { %>
+      <option value="<%= b.id %>"><%= b.name %></option>
+    <% }) %>
+  </select>
+
+  <button type="submit">Crear</button>
+</form>
+
+    </section>
+
+    <%- include('../partials/footer') %>
+</body>

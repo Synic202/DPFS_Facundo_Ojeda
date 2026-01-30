@@ -1,0 +1,11 @@
+<h1>Productos</h1>
+
+<ul>
+  <% products.forEach(product => { %>
+    <li>
+      <strong><%= product.name %></strong> - <%= product.description %>
+    </li>
+  <% }) %>
+</ul>
+
+<a href="/users/logout">Cerrar sesión</a>

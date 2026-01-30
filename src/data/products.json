@@ -1,0 +1,28 @@
+[
+  {
+    "id": 2,
+    "name": "Mouse Inalámbrico",
+    "description": "Mouse ergonómico inalámbrico",
+    "image": "mouse.jpg",
+    "category": "Accesorios",
+    "colors": [
+      "Negro"
+    ],
+    "price": 25000
+  },
+  {
+    "id": 3,
+    "name": "Teclado Mecánico",
+    "description": "Teclado mecánico con retroiluminación",
+    "image": "teclado.jpg",
+    "category": "Accesorios",
+    "colors": [
+      "Negro",
+      "Blanco"
+    ],
+    "price": 80000
+  },
+  {
+    "id": 4
+  }
+]
